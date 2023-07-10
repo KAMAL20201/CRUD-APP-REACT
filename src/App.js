@@ -47,7 +47,7 @@ function App() {
     <Container>
       <Header/>
       <Add>
-       <input type="text" placeholder="Add Task" value={taskInput} onChange={inputTaskHandler}/>
+       <input type="text" placeholder="Add Task Title" value={taskInput} onChange={inputTaskHandler}/>
        <input type="text" placeholder="Add Description" value={taskDescription} onChange={inputDescHandler}/>
        <button onClick={addHandler}>Add</button>
        </Add>
@@ -67,14 +67,32 @@ width:100%;
 `
 
 const Add=styled.div`
+width:100vw;
 display:flex;
 align-items:center;
 justify-content:center;
+
+@media (max-width:400px){
+    
+    flex-direction:column;
+  }
 input{
   margin:10px 10px;
+  @media (max-width:400px){
+    width:80%;
+    margin: 10px auto;
+  }
 }
 button{
   margin:10px 10px;
+  &:hover{
+    background-color:grey;
+    color:white;
+  }
+  @media (max-width:400px){
+    width:30%;
+    
+  }
 }
 
 `

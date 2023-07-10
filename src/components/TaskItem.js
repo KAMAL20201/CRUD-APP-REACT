@@ -72,7 +72,26 @@ const Item = styled.div`
   width: 100%;
   align-items: center;
   justify-content: space-around;
-  /* justify-content: flex-start; */
+
+  input{
+    /* margin-right:30px;
+    margin-left:-80px; */
+    padding:4px;
+    width:15%;
+    &:nth-child(1){
+      flex-basis: 30%;
+    }
+    &:nth-child(2){
+      flex-basis: 30%;
+    }
+    
+  
+    @media (max-width:400px){
+      margin:0px;
+      height:50px;
+      font-size:8px;
+    }
+  }
   
 `;
 const EditButton = styled.button`
@@ -95,7 +114,7 @@ const Delete = styled.p`
   align-items: center;
 `;
 const Title = styled.p`
- flex-basis:25%;
+ flex-basis:20%;
  margin-left:30px;
 `;
 
